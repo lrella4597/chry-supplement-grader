@@ -166,6 +166,60 @@ export const preloadedSupplements: SupplementProfile[] = [
     },
   },
 
+  {
+    id: "texas-superfood",
+    product_name: "Texas SuperFood",
+    brand: "Texas SuperFood",
+    category: "greens",
+    data: {
+      product_name: "Texas SuperFood Original",
+      serving_size: "6 capsules",
+      servings_per_container: 30,
+      ingredients: [
+        { name: "Texas SuperFood Proprietary Blend", dose: 6000, unit: "mg", form: "55+ raw fruits and vegetables", is_proprietary_blend: true, proprietary_blend_name: "Texas SuperFood Proprietary Blend" },
+      ],
+      other_ingredients: ["vegetable capsule"],
+      contains_proprietary_blend: true,
+    },
+  },
+  {
+    id: "primal-greens",
+    product_name: "Primal Greens",
+    brand: "Primal Harvest",
+    category: "greens",
+    data: {
+      product_name: "Primal Greens",
+      serving_size: "1 scoop (9.3g)",
+      servings_per_container: 30,
+      ingredients: [
+        { name: "Primal Greens Blend", dose: 5800, unit: "mg", form: null, is_proprietary_blend: true, proprietary_blend_name: "Primal Greens Blend" },
+      ],
+      other_ingredients: ["natural flavors", "stevia", "silicon dioxide"],
+      contains_proprietary_blend: true,
+    },
+  },
+  {
+    id: "your-super-super-green",
+    product_name: "Super Green",
+    brand: "Your Super",
+    category: "greens",
+    data: {
+      product_name: "Your Super Super Green",
+      serving_size: "1 serving (6g)",
+      servings_per_container: 25,
+      ingredients: [
+        { name: "Organic Wheatgrass", dose: 0, unit: "mg", form: "organic", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Organic Barley Grass", dose: 0, unit: "mg", form: "organic", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Organic Spirulina", dose: 0, unit: "mg", form: "organic", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Organic Chlorella", dose: 0, unit: "mg", form: "organic", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Organic Moringa", dose: 0, unit: "mg", form: "organic", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Organic Baobab", dose: 0, unit: "mg", form: "organic", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: [],
+      contains_proprietary_blend: false,
+    },
+  },
+
   // ============================================================
   // SLEEP / RECOVERY
   // ============================================================
@@ -364,6 +418,42 @@ export const preloadedSupplements: SupplementProfile[] = [
       contains_proprietary_blend: true,
     },
   },
+  {
+    id: "som-sleep-drink",
+    product_name: "Som Sleep",
+    brand: "Som",
+    category: "sleep",
+    data: {
+      product_name: "Som Sleep (Drink)",
+      serving_size: "1 can (8.1 fl oz)",
+      servings_per_container: 1,
+      ingredients: [
+        { name: "Magnesium", dose: 50, unit: "mg", form: null, is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Vitamin B6", dose: 1, unit: "mg", form: null, is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "L-Theanine", dose: 200, unit: "mg", form: null, is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "GABA", dose: 100, unit: "mg", form: null, is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Melatonin", dose: 3, unit: "mg", form: null, is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["purified water", "natural flavors", "citric acid"],
+      contains_proprietary_blend: false,
+    },
+  },
+  {
+    id: "natrol-melatonin-5mg",
+    product_name: "Melatonin 5mg",
+    brand: "Natrol",
+    category: "sleep",
+    data: {
+      product_name: "Natrol Melatonin 5mg",
+      serving_size: "1 tablet",
+      servings_per_container: 100,
+      ingredients: [
+        { name: "Melatonin", dose: 5, unit: "mg", form: null, is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["dicalcium phosphate", "cellulose", "stearic acid"],
+      contains_proprietary_blend: false,
+    },
+  },
 
   // ============================================================
   // PRE-WORKOUT
@@ -551,6 +641,71 @@ export const preloadedSupplements: SupplementProfile[] = [
     },
   },
 
+  {
+    id: "bucked-up-pre-workout",
+    product_name: "Bucked Up Pre-Workout",
+    brand: "Bucked Up",
+    category: "preworkout",
+    data: {
+      product_name: "Bucked Up Pre-Workout",
+      serving_size: "1 scoop (10.42g)",
+      servings_per_container: 30,
+      ingredients: [
+        { name: "L-Citrulline", dose: 6000, unit: "mg", form: null, is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Beta-Alanine", dose: 2000, unit: "mg", form: null, is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Caffeine Anhydrous", dose: 200, unit: "mg", form: null, is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Alpha-GPC", dose: 200, unit: "mg", form: "AlphaSize alpha-glyceryl phosphoryl choline", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Taurine", dose: 100, unit: "mg", form: null, is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Deer Antler Velvet", dose: 50, unit: "mg", form: null, is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["natural flavors", "sucralose", "silicon dioxide", "acesulfame potassium"],
+      contains_proprietary_blend: false,
+    },
+  },
+  {
+    id: "raw-nutrition-pump",
+    product_name: "Pump Stim-Free Pre-Workout",
+    brand: "Raw Nutrition",
+    category: "preworkout",
+    data: {
+      product_name: "Raw Nutrition Pump",
+      serving_size: "1 scoop (18g)",
+      servings_per_container: 40,
+      ingredients: [
+        { name: "L-Citrulline", dose: 7000, unit: "mg", form: null, is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "GlycerPump", dose: 3000, unit: "mg", form: "65% glycerol powder", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Betaine Anhydrous", dose: 2500, unit: "mg", form: null, is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Nitrosigine", dose: 1500, unit: "mg", form: "inositol-stabilized arginine silicate", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "S7", dose: 50, unit: "mg", form: "plant-based nitric oxide booster", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["natural flavors", "citric acid", "stevia"],
+      contains_proprietary_blend: false,
+    },
+  },
+  {
+    id: "kaged-pre-kaged-elite",
+    product_name: "Pre-Kaged Elite",
+    brand: "Kaged",
+    category: "preworkout",
+    data: {
+      product_name: "Kaged Pre-Kaged Elite",
+      serving_size: "1 scoop (27g)",
+      servings_per_container: 20,
+      ingredients: [
+        { name: "L-Citrulline", dose: 7000, unit: "mg", form: null, is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Beta-Alanine", dose: 3200, unit: "mg", form: null, is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Betaine Anhydrous", dose: 2500, unit: "mg", form: null, is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "L-Tyrosine", dose: 2000, unit: "mg", form: null, is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Taurine", dose: 2000, unit: "mg", form: null, is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Caffeine", dose: 388, unit: "mg", form: "caffeine anhydrous", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Alpha-GPC", dose: 300, unit: "mg", form: "alpha-glyceryl phosphoryl choline", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "BioPerine", dose: 5, unit: "mg", form: "black pepper extract", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["natural flavors", "sucralose", "silicon dioxide"],
+      contains_proprietary_blend: false,
+    },
+  },
+
   // ============================================================
   // PROTEIN
   // ============================================================
@@ -654,6 +809,71 @@ export const preloadedSupplements: SupplementProfile[] = [
         { name: "Protein", dose: 25, unit: "g", form: "hydrolyzed whey protein isolate, whey protein isolate", is_proprietary_blend: false, proprietary_blend_name: null },
       ],
       other_ingredients: ["natural and artificial flavors", "sucralose", "soy lecithin"],
+      contains_proprietary_blend: false,
+    },
+  },
+
+  {
+    id: "promix-whey-isolate",
+    product_name: "Whey Protein Isolate",
+    brand: "Promix",
+    category: "protein",
+    data: {
+      product_name: "Promix Grass-Fed Whey Protein Isolate",
+      serving_size: "1 scoop (31g)",
+      servings_per_container: 30,
+      ingredients: [
+        { name: "Protein", dose: 25, unit: "g", form: "grass-fed whey protein isolate", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["sunflower lecithin"],
+      contains_proprietary_blend: false,
+    },
+  },
+  {
+    id: "naked-whey",
+    product_name: "Naked Whey",
+    brand: "Naked Nutrition",
+    category: "protein",
+    data: {
+      product_name: "Naked Whey",
+      serving_size: "2 scoops (30g)",
+      servings_per_container: 76,
+      ingredients: [
+        { name: "Protein", dose: 25, unit: "g", form: "100% grass-fed whey protein concentrate", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: [],
+      contains_proprietary_blend: false,
+    },
+  },
+  {
+    id: "garden-of-life-raw-organic-protein",
+    product_name: "Raw Organic Protein",
+    brand: "Garden of Life",
+    category: "protein",
+    data: {
+      product_name: "Garden of Life Raw Organic Protein",
+      serving_size: "1 scoop (31g)",
+      servings_per_container: 20,
+      ingredients: [
+        { name: "Protein", dose: 22, unit: "g", form: "organic sprouted protein blend (organic pea protein, organic sprouted brown rice protein, organic amaranth, organic buckwheat, organic millet, organic cracked wall chlorella, organic quinoa, organic chia seed, organic kidney bean, organic adzuki bean, organic flax seed, organic garbanzo bean, organic lentil, organic sunflower seed)", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["organic flavors"],
+      contains_proprietary_blend: false,
+    },
+  },
+  {
+    id: "levels-whey-protein",
+    product_name: "Whey Protein",
+    brand: "Levels",
+    category: "protein",
+    data: {
+      product_name: "Levels 100% Grass-Fed Whey Protein",
+      serving_size: "1 scoop (32g)",
+      servings_per_container: 29,
+      ingredients: [
+        { name: "Protein", dose: 24, unit: "g", form: "100% grass-fed whey protein concentrate", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["sunflower lecithin"],
       contains_proprietary_blend: false,
     },
   },
@@ -822,6 +1042,59 @@ export const preloadedSupplements: SupplementProfile[] = [
         { name: "Selenium", dose: 200, unit: "mcg", form: "selenomethionine", is_proprietary_blend: false, proprietary_blend_name: null },
       ],
       other_ingredients: ["hypromellose capsule", "leucine"],
+      contains_proprietary_blend: false,
+    },
+  },
+
+  {
+    id: "one-a-day-mens",
+    product_name: "One A Day Men's Health Formula",
+    brand: "One A Day",
+    category: "multivitamin",
+    data: {
+      product_name: "One A Day Men's Health Formula",
+      serving_size: "1 tablet",
+      servings_per_container: 200,
+      ingredients: [
+        { name: "Vitamin A", dose: 900, unit: "mcg", form: "retinyl acetate and beta-carotene", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Vitamin C", dose: 90, unit: "mg", form: "ascorbic acid", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Vitamin D3", dose: 25, unit: "mcg", form: "cholecalciferol", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Vitamin E", dose: 20, unit: "mg", form: "dl-alpha tocopheryl acetate", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Vitamin K", dose: 25, unit: "mcg", form: "phytonadione", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Vitamin B6", dose: 2, unit: "mg", form: "pyridoxine HCl", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Vitamin B12", dose: 6, unit: "mcg", form: "cyanocobalamin", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Zinc", dose: 11, unit: "mg", form: "zinc oxide", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: [
+        "corn starch",
+        "maltodextrin",
+        "FD&C Blue 2",
+        "FD&C Red 40",
+        "titanium dioxide",
+      ],
+      contains_proprietary_blend: false,
+    },
+  },
+  {
+    id: "megafood-one-daily",
+    product_name: "One Daily",
+    brand: "MegaFood",
+    category: "multivitamin",
+    data: {
+      product_name: "MegaFood One Daily",
+      serving_size: "1 tablet",
+      servings_per_container: 60,
+      ingredients: [
+        { name: "Vitamin A", dose: 600, unit: "mcg", form: "beta-carotene", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Vitamin C", dose: 60, unit: "mg", form: "ascorbic acid (from organic oranges)", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Vitamin D3", dose: 25, unit: "mcg", form: "cholecalciferol", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Vitamin E", dose: 13.5, unit: "mg", form: "d-alpha tocopherol", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Vitamin B12", dose: 8, unit: "mcg", form: "methylcobalamin", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Folate", dose: 400, unit: "mcg DFE", form: "methylfolate (5-MTHF)", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Iron", dose: 9, unit: "mg", form: "ferrous bisglycinate", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Zinc", dose: 5, unit: "mg", form: "zinc bisglycinate", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["organic brown rice", "vegetable cellulose"],
       contains_proprietary_blend: false,
     },
   },
@@ -1114,6 +1387,70 @@ export const preloadedSupplements: SupplementProfile[] = [
     },
   },
 
+  {
+    id: "mind-lab-pro",
+    product_name: "Mind Lab Pro",
+    brand: "Opti-Nutra",
+    category: "cognitive",
+    data: {
+      product_name: "Mind Lab Pro",
+      serving_size: "2 capsules",
+      servings_per_container: 30,
+      ingredients: [
+        { name: "Citicoline", dose: 250, unit: "mg", form: "Cognizin citicoline", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Bacopa Monnieri", dose: 150, unit: "mg", form: "full spectrum extract (24% bacosides)", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Lion's Mane Mushroom", dose: 500, unit: "mg", form: "organic full spectrum", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Phosphatidylserine", dose: 100, unit: "mg", form: "Sharp-PS Green (sunflower-derived)", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "N-Acetyl L-Tyrosine", dose: 175, unit: "mg", form: null, is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "L-Theanine", dose: 100, unit: "mg", form: "Suntheanine", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Rhodiola Rosea", dose: 50, unit: "mg", form: "3% rosavins, 1% salidroside", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Maritime Pine Bark Extract", dose: 75, unit: "mg", form: "95% proanthocyanidins", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["vegetable capsule (pullulan)", "rice concentrate"],
+      contains_proprietary_blend: false,
+    },
+  },
+  {
+    id: "thesis-energy-formula",
+    product_name: "Thesis Energy Formula",
+    brand: "Thesis",
+    category: "cognitive",
+    data: {
+      product_name: "Thesis Energy Formula (Personalized Nootropics)",
+      serving_size: "4 capsules",
+      servings_per_container: 30,
+      ingredients: [
+        { name: "Citicoline", dose: 300, unit: "mg", form: "Cognizin citicoline", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "NAC", dose: 500, unit: "mg", form: "N-acetyl cysteine", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "L-Theanine", dose: 200, unit: "mg", form: null, is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Caffeine", dose: 100, unit: "mg", form: "caffeine anhydrous", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["vegetable capsule"],
+      contains_proprietary_blend: false,
+    },
+  },
+  {
+    id: "gorilla-mind-smooth",
+    product_name: "Gorilla Mind Smooth",
+    brand: "Gorilla Mind",
+    category: "cognitive",
+    data: {
+      product_name: "Gorilla Mind Smooth",
+      serving_size: "6 capsules",
+      servings_per_container: 30,
+      ingredients: [
+        { name: "Alpha-GPC", dose: 600, unit: "mg", form: "alpha-glyceryl phosphoryl choline", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "L-Tyrosine", dose: 750, unit: "mg", form: null, is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Lion's Mane Mushroom", dose: 500, unit: "mg", form: null, is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "DMAE", dose: 375, unit: "mg", form: "dimethylaminoethanol", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Bacopa Monnieri", dose: 250, unit: "mg", form: null, is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Kanna", dose: 250, unit: "mg", form: "Sceletium tortuosum extract", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["gelatin capsule", "silicon dioxide"],
+      contains_proprietary_blend: false,
+    },
+  },
+
   // ============================================================
   // WOMEN'S HEALTH
   // ============================================================
@@ -1146,6 +1483,75 @@ export const preloadedSupplements: SupplementProfile[] = [
         "FD&C Red 40",
         "FD&C Blue 1",
       ],
+      contains_proprietary_blend: false,
+    },
+  },
+
+  {
+    id: "ritual-essential-prenatal",
+    product_name: "Essential Prenatal",
+    brand: "Ritual",
+    category: "womens",
+    data: {
+      product_name: "Ritual Essential Prenatal",
+      serving_size: "2 capsules",
+      servings_per_container: 30,
+      ingredients: [
+        { name: "DHA", dose: 350, unit: "mg", form: "algae-sourced omega-3", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Iron", dose: 18, unit: "mg", form: "ferrous bisglycinate chelate", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Folate", dose: 1000, unit: "mcg DFE", form: "methylfolate (5-MTHF)", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Vitamin D3", dose: 50, unit: "mcg", form: "cholecalciferol (2000 IU)", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Choline", dose: 55, unit: "mg", form: "choline bitartrate", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Vitamin K2", dose: 90, unit: "mcg", form: "MK-7 (menaquinone-7)", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Vitamin B12", dose: 8, unit: "mcg", form: "methylcobalamin", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Iodine", dose: 150, unit: "mcg", form: "potassium iodide", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["delayed-release capsule (hypromellose, gellan gum)"],
+      contains_proprietary_blend: false,
+    },
+  },
+  {
+    id: "pink-stork-total-prenatal",
+    product_name: "Total Prenatal",
+    brand: "Pink Stork",
+    category: "womens",
+    data: {
+      product_name: "Pink Stork Total Prenatal",
+      serving_size: "3 capsules",
+      servings_per_container: 30,
+      ingredients: [
+        { name: "Folate", dose: 800, unit: "mcg", form: "methylfolate (5-MTHF)", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Iron", dose: 27, unit: "mg", form: "ferrous bisglycinate", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Vitamin D3", dose: 15, unit: "mcg", form: "cholecalciferol (600 IU)", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Vitamin B12", dose: 2.6, unit: "mcg", form: "methylcobalamin", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "DHA", dose: 200, unit: "mg", form: "algae oil", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["vegetable capsule", "rice flour"],
+      contains_proprietary_blend: false,
+    },
+  },
+  {
+    id: "needed-prenatal-multi",
+    product_name: "Prenatal Multi",
+    brand: "Needed",
+    category: "womens",
+    data: {
+      product_name: "Needed Prenatal Multi",
+      serving_size: "8 capsules",
+      servings_per_container: 30,
+      ingredients: [
+        { name: "Folate", dose: 800, unit: "mcg DFE", form: "methylfolate (5-MTHF)", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Iron", dose: 18, unit: "mg", form: "iron bisglycinate", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Vitamin D3", dose: 100, unit: "mcg", form: "cholecalciferol (4000 IU)", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Choline", dose: 300, unit: "mg", form: "choline bitartrate", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Vitamin K2", dose: 100, unit: "mcg", form: "MK-7 (menaquinone-7)", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Vitamin B12", dose: 15, unit: "mcg", form: "methylcobalamin", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Vitamin C", dose: 100, unit: "mg", form: "ascorbic acid", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Zinc", dose: 15, unit: "mg", form: "zinc bisglycinate", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Iodine", dose: 290, unit: "mcg", form: "potassium iodide", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Magnesium", dose: 100, unit: "mg", form: "magnesium bisglycinate", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["vegetable capsule"],
       contains_proprietary_blend: false,
     },
   },
@@ -1193,6 +1599,394 @@ export const preloadedSupplements: SupplementProfile[] = [
       ],
       other_ingredients: ["hypromellose capsule"],
       contains_proprietary_blend: false,
+    },
+  },
+  // ============================================================
+  // ADDITIONAL INDIVIDUAL SUPPLEMENTS
+  // ============================================================
+  {
+    id: "magtein-magnesium-l-threonate",
+    product_name: "Magtein Magnesium L-Threonate",
+    brand: "NOW",
+    category: "individual",
+    data: {
+      product_name: "NOW Magtein Magnesium L-Threonate",
+      serving_size: "3 capsules",
+      servings_per_container: 30,
+      ingredients: [
+        { name: "Magnesium", dose: 144, unit: "mg", form: "magnesium L-threonate (Magtein)", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["hypromellose capsule", "stearic acid", "silicon dioxide"],
+      contains_proprietary_blend: false,
+    },
+  },
+  {
+    id: "nutricost-tongkat-ali",
+    product_name: "Tongkat Ali 500mg",
+    brand: "Nutricost",
+    category: "individual",
+    data: {
+      product_name: "Nutricost Tongkat Ali 500mg",
+      serving_size: "1 capsule",
+      servings_per_container: 120,
+      ingredients: [
+        { name: "Tongkat Ali", dose: 500, unit: "mg", form: "Eurycoma longifolia root extract (200:1)", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["rice flour", "gelatin capsule", "magnesium stearate"],
+      contains_proprietary_blend: false,
+    },
+  },
+  {
+    id: "live-momentous-omega-3",
+    product_name: "Omega-3",
+    brand: "Momentous",
+    category: "individual",
+    data: {
+      product_name: "Momentous Omega-3",
+      serving_size: "2 softgels",
+      servings_per_container: 30,
+      ingredients: [
+        { name: "EPA", dose: 1500, unit: "mg", form: "triglyceride form", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "DHA", dose: 1000, unit: "mg", form: "triglyceride form", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["softgel (fish gelatin, glycerin, water)", "mixed tocopherols", "rosemary extract"],
+      contains_proprietary_blend: false,
+    },
+  },
+  {
+    id: "double-wood-tongkat-ali",
+    product_name: "Tongkat Ali",
+    brand: "Double Wood",
+    category: "individual",
+    data: {
+      product_name: "Double Wood Tongkat Ali",
+      serving_size: "2 capsules",
+      servings_per_container: 60,
+      ingredients: [
+        { name: "Tongkat Ali", dose: 1000, unit: "mg", form: "Eurycoma longifolia root extract (100:1)", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["vegetable cellulose capsule"],
+      contains_proprietary_blend: false,
+    },
+  },
+
+  // ============================================================
+  // JOINT / INFLAMMATION
+  // ============================================================
+  {
+    id: "move-free-advanced",
+    product_name: "Move Free Advanced",
+    brand: "Move Free",
+    category: "individual",
+    data: {
+      product_name: "Move Free Advanced",
+      serving_size: "2 tablets",
+      servings_per_container: 80,
+      ingredients: [
+        { name: "Glucosamine", dose: 1500, unit: "mg", form: "glucosamine HCl", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Chondroitin", dose: 200, unit: "mg", form: "chondroitin sulfate", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Hyaluronic Acid", dose: 3.3, unit: "mg", form: null, is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Uniflex", dose: 250, unit: "mg", form: "Chinese Skullcap and Acacia catechu extract", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["cellulose", "silicon dioxide", "titanium dioxide"],
+      contains_proprietary_blend: false,
+    },
+  },
+  {
+    id: "vital-proteins-collagen-peptides",
+    product_name: "Collagen Peptides",
+    brand: "Vital Proteins",
+    category: "individual",
+    data: {
+      product_name: "Vital Proteins Collagen Peptides",
+      serving_size: "2 scoops (20g)",
+      servings_per_container: 28,
+      ingredients: [
+        { name: "Collagen Peptides", dose: 20000, unit: "mg", form: "bovine hide collagen peptides", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: [],
+      contains_proprietary_blend: false,
+    },
+  },
+  {
+    id: "sports-research-collagen-peptides",
+    product_name: "Collagen Peptides",
+    brand: "Sports Research",
+    category: "individual",
+    data: {
+      product_name: "Sports Research Collagen Peptides",
+      serving_size: "1 scoop (11g)",
+      servings_per_container: 41,
+      ingredients: [
+        { name: "Collagen Peptides", dose: 11000, unit: "mg", form: "hydrolyzed bovine collagen peptides", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: [],
+      contains_proprietary_blend: false,
+    },
+  },
+
+  // ============================================================
+  // OMEGA-3
+  // ============================================================
+  {
+    id: "carlson-elite-omega-3-gems",
+    product_name: "Elite Omega-3 Gems",
+    brand: "Carlson",
+    category: "individual",
+    data: {
+      product_name: "Carlson Elite Omega-3 Gems",
+      serving_size: "2 softgels",
+      servings_per_container: 60,
+      ingredients: [
+        { name: "EPA", dose: 800, unit: "mg", form: "triglyceride form", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "DHA", dose: 600, unit: "mg", form: "triglyceride form", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["softgel (gelatin, glycerin, water)", "vitamin E (d-alpha tocopherol)", "rosemary extract"],
+      contains_proprietary_blend: false,
+    },
+  },
+  {
+    id: "vivo-life-omega-3-algae",
+    product_name: "Omega-3 (Algae)",
+    brand: "Vivo Life",
+    category: "individual",
+    data: {
+      product_name: "Vivo Life Omega-3 (Algae-Sourced)",
+      serving_size: "2 softgels",
+      servings_per_container: 30,
+      ingredients: [
+        { name: "DHA", dose: 300, unit: "mg", form: "algae oil (Schizochytrium sp.)", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "EPA", dose: 150, unit: "mg", form: "algae oil (Schizochytrium sp.)", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["sunflower oil", "rosemary extract", "mixed tocopherols"],
+      contains_proprietary_blend: false,
+    },
+  },
+
+  // ============================================================
+  // INDIVIDUAL POPULAR SUPPLEMENTS
+  // ============================================================
+  {
+    id: "athletic-greens-d3-k2-drops",
+    product_name: "D3+K2 Drops",
+    brand: "Athletic Greens",
+    category: "individual",
+    data: {
+      product_name: "Athletic Greens D3+K2 Drops",
+      serving_size: "1 drop",
+      servings_per_container: 600,
+      ingredients: [
+        { name: "Vitamin D3", dose: 25, unit: "mcg", form: "cholecalciferol (1000 IU)", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Vitamin K2", dose: 15, unit: "mcg", form: "MK-7 (menaquinone-7)", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["MCT oil (from coconut)"],
+      contains_proprietary_blend: false,
+    },
+  },
+  {
+    id: "thorne-berberine",
+    product_name: "Berberine",
+    brand: "Thorne",
+    category: "individual",
+    data: {
+      product_name: "Thorne Berberine",
+      serving_size: "2 capsules",
+      servings_per_container: 30,
+      ingredients: [
+        { name: "Berberine HCl", dose: 1000, unit: "mg", form: "berberine hydrochloride", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["HPMC capsule", "leucine"],
+      contains_proprietary_blend: false,
+    },
+  },
+  {
+    id: "momentous-tongkat-ali",
+    product_name: "Tongkat Ali",
+    brand: "Momentous",
+    category: "individual",
+    data: {
+      product_name: "Momentous Tongkat Ali",
+      serving_size: "1 capsule",
+      servings_per_container: 60,
+      ingredients: [
+        { name: "Tongkat Ali", dose: 400, unit: "mg", form: "standardized 10% eurycomanone (Eurycoma longifolia)", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["HPMC capsule"],
+      contains_proprietary_blend: false,
+    },
+  },
+  {
+    id: "now-vitamin-d3-5000",
+    product_name: "Vitamin D3 5000 IU",
+    brand: "NOW",
+    category: "individual",
+    data: {
+      product_name: "NOW Vitamin D3 5000 IU (125 mcg)",
+      serving_size: "1 softgel",
+      servings_per_container: 240,
+      ingredients: [
+        { name: "Vitamin D3", dose: 125, unit: "mcg", form: "cholecalciferol (5000 IU)", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["extra virgin olive oil", "softgel (gelatin, glycerin, water)"],
+      contains_proprietary_blend: false,
+    },
+  },
+  {
+    id: "garden-of-life-dr-formulated-probiotics",
+    product_name: "Dr. Formulated Probiotics Once Daily",
+    brand: "Garden of Life",
+    category: "individual",
+    data: {
+      product_name: "Garden of Life Dr. Formulated Probiotics Once Daily",
+      serving_size: "1 capsule",
+      servings_per_container: 30,
+      ingredients: [
+        { name: "Probiotic Blend", dose: 50000000000, unit: "CFU", form: "16 strains including L. rhamnosus, L. acidophilus, B. lactis, L. plantarum, L. casei, L. paracasei, B. longum, L. bulgaricus", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["organic potato starch", "vegetable capsule"],
+      contains_proprietary_blend: false,
+    },
+  },
+  {
+    id: "seed-ds01-daily-synbiotic",
+    product_name: "DS-01 Daily Synbiotic",
+    brand: "Seed",
+    category: "individual",
+    data: {
+      product_name: "Seed DS-01 Daily Synbiotic",
+      serving_size: "2 capsules",
+      servings_per_container: 30,
+      ingredients: [
+        { name: "Probiotic + Prebiotic Blend", dose: 53600000000, unit: "AFU", form: "24 probiotic strains with prebiotic outer capsule (organic pomegranate, organic pine bark)", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["vegetable capsule", "organic pomegranate extract", "organic pine bark extract"],
+      contains_proprietary_blend: false,
+    },
+  },
+
+  // ============================================================
+  // ELECTROLYTES / HYDRATION
+  // ============================================================
+  {
+    id: "liquid-iv-hydration",
+    product_name: "Hydration Multiplier",
+    brand: "Liquid IV",
+    category: "individual",
+    data: {
+      product_name: "Liquid IV Hydration Multiplier",
+      serving_size: "1 stick pack (16g)",
+      servings_per_container: 1,
+      ingredients: [
+        { name: "Sodium", dose: 500, unit: "mg", form: "sodium citrate", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Potassium", dose: 370, unit: "mg", form: "potassium citrate", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Vitamin C", dose: 56, unit: "mg", form: "ascorbic acid", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Niacin (B3)", dose: 17.5, unit: "mg", form: "niacinamide", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Pantothenic Acid (B5)", dose: 8.5, unit: "mg", form: "calcium pantothenate", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Vitamin B6", dose: 1.7, unit: "mg", form: "pyridoxine HCl", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Vitamin B12", dose: 6.8, unit: "mcg", form: "cyanocobalamin", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["dextrose", "citric acid", "natural flavors", "stevia leaf extract", "silicon dioxide"],
+      contains_proprietary_blend: false,
+    },
+  },
+  {
+    id: "lmnt-electrolytes",
+    product_name: "LMNT Electrolytes",
+    brand: "LMNT",
+    category: "individual",
+    data: {
+      product_name: "LMNT Electrolyte Drink Mix",
+      serving_size: "1 stick pack (6g)",
+      servings_per_container: 1,
+      ingredients: [
+        { name: "Sodium", dose: 1000, unit: "mg", form: "sodium chloride", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Potassium", dose: 200, unit: "mg", form: "potassium chloride", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Magnesium", dose: 60, unit: "mg", form: "magnesium malate", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["citric acid", "natural flavors", "stevia leaf extract"],
+      contains_proprietary_blend: false,
+    },
+  },
+  {
+    id: "nuun-sport",
+    product_name: "Nuun Sport",
+    brand: "Nuun",
+    category: "individual",
+    data: {
+      product_name: "Nuun Sport Electrolyte Tablets",
+      serving_size: "1 tablet",
+      servings_per_container: 10,
+      ingredients: [
+        { name: "Sodium", dose: 300, unit: "mg", form: "sodium bicarbonate, sodium carbonate", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Potassium", dose: 150, unit: "mg", form: "potassium bicarbonate", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Magnesium", dose: 25, unit: "mg", form: "magnesium oxide", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Calcium", dose: 13, unit: "mg", form: "calcium carbonate", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Vitamin C", dose: 38, unit: "mg", form: "ascorbic acid", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["citric acid", "sorbitol", "natural flavors", "dextrose", "stevia leaf extract"],
+      contains_proprietary_blend: false,
+    },
+  },
+  {
+    id: "pedialyte-sport",
+    product_name: "Pedialyte Sport",
+    brand: "Pedialyte",
+    category: "individual",
+    data: {
+      product_name: "Pedialyte Sport",
+      serving_size: "1 bottle (591ml)",
+      servings_per_container: 1,
+      ingredients: [
+        { name: "Sodium", dose: 490, unit: "mg", form: "sodium chloride, sodium citrate", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Potassium", dose: 260, unit: "mg", form: "potassium citrate", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Chloride", dose: 440, unit: "mg", form: "sodium chloride", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["dextrose", "citric acid", "natural and artificial flavors", "sucralose", "acesulfame potassium", "FD&C Red 40"],
+      contains_proprietary_blend: false,
+    },
+  },
+
+  // ============================================================
+  // TESTOSTERONE / MEN'S HEALTH
+  // ============================================================
+  {
+    id: "gorilla-mind-sigma",
+    product_name: "Gorilla Mind Sigma",
+    brand: "Gorilla Mind",
+    category: "individual",
+    data: {
+      product_name: "Gorilla Mind Sigma",
+      serving_size: "6 capsules",
+      servings_per_container: 30,
+      ingredients: [
+        { name: "Vitamin D3", dose: 125, unit: "mcg", form: "cholecalciferol (5000 IU)", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Zinc", dose: 30, unit: "mg", form: "zinc picolinate", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Boron", dose: 10, unit: "mg", form: "boron citrate", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Ashwagandha", dose: 600, unit: "mg", form: "KSM-66 (Withania somnifera root extract)", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Tongkat Ali", dose: 400, unit: "mg", form: "Eurycoma longifolia root extract", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Fadogia Agrestis", dose: 600, unit: "mg", form: "stem extract", is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["gelatin capsule", "silicon dioxide"],
+      contains_proprietary_blend: false,
+    },
+  },
+  {
+    id: "force-factor-test-x180",
+    product_name: "Test X180",
+    brand: "Force Factor",
+    category: "individual",
+    data: {
+      product_name: "Force Factor Test X180",
+      serving_size: "2 capsules",
+      servings_per_container: 30,
+      ingredients: [
+        { name: "Test X180 Blend", dose: 798, unit: "mg", form: null, is_proprietary_blend: true, proprietary_blend_name: "Test X180 Blend" },
+        { name: "Fenugreek", dose: 0, unit: "mg", form: "Testofen fenugreek seed extract", is_proprietary_blend: true, proprietary_blend_name: "Test X180 Blend" },
+        { name: "Tribulus", dose: 0, unit: "mg", form: "Tribulus terrestris fruit extract", is_proprietary_blend: true, proprietary_blend_name: "Test X180 Blend" },
+        { name: "Maca", dose: 0, unit: "mg", form: "maca root extract", is_proprietary_blend: true, proprietary_blend_name: "Test X180 Blend" },
+      ],
+      other_ingredients: ["gelatin", "silicon dioxide", "titanium dioxide", "FD&C Blue 1"],
+      contains_proprietary_blend: true,
     },
   },
   {
