@@ -6,31 +6,31 @@ export default function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden bg-white">
         <div className="absolute inset-0 bg-gradient-to-b from-dog/5 via-transparent to-transparent pointer-events-none" />
-        <div className="max-w-5xl mx-auto px-4 pt-20 pb-24 text-center relative z-10">
-          <div className="inline-flex items-center gap-2 bg-dog/8 border border-dog/15 rounded-full px-4 py-1.5 mb-8">
-            <span className="text-lg">🐶</span>
-            <span className="text-xs font-semibold text-dog tracking-wide uppercase">
+        <div className="max-w-5xl mx-auto px-4 pt-12 sm:pt-20 pb-16 sm:pb-24 text-center relative z-10">
+          <div className="inline-flex items-center gap-2 bg-dog/8 border border-dog/15 rounded-full px-3 sm:px-4 py-1.5 mb-6 sm:mb-8">
+            <span className="text-base sm:text-lg">🐶</span>
+            <span className="text-[10px] sm:text-xs font-semibold text-dog tracking-wide uppercase">
               Your Supplement Watchdog
             </span>
           </div>
 
-          <h1 className="font-display text-6xl sm:text-7xl lg:text-8xl tracking-tight mb-6 leading-[0.9]">
+          <h1 className="font-display text-4xl sm:text-6xl lg:text-8xl tracking-tight mb-4 sm:mb-6 leading-[0.9]">
             <span className="text-text">Stop Buying</span>
             <br />
             <span className="text-dog">Bad Supplements</span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-8 sm:mb-12 leading-relaxed px-2">
             SuppDog sniffs out fairy-dusted formulas, hidden proprietary blends, and
             sketchy ingredients — so you don&apos;t waste money on supplements that
             don&apos;t work. Powered by clinical research and AI.
           </p>
 
           {/* Input cards */}
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 max-w-4xl mx-auto mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto mb-8 sm:mb-12 px-2 sm:px-0">
             <Link href="/grade?method=photo"
-              className="group rounded-2xl border border-border bg-white p-6 text-left hover:border-dog/30 hover:shadow-lg transition-all duration-300">
-              <div className="w-10 h-10 rounded-xl bg-dog/8 flex items-center justify-center mb-4 group-hover:bg-dog/15 transition-colors text-xl">
+              className="group rounded-2xl border border-border bg-white p-5 sm:p-6 text-left hover:border-dog/30 hover:shadow-lg transition-all duration-300">
+              <div className="w-10 h-10 rounded-xl bg-dog/8 flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-dog/15 transition-colors text-xl">
                 📸
               </div>
               <h3 className="font-bold text-text mb-1">Scan a Label</h3>
@@ -38,8 +38,8 @@ export default function Home() {
             </Link>
 
             <Link href="/grade?method=url"
-              className="group rounded-2xl border border-border bg-white p-6 text-left hover:border-dog/30 hover:shadow-lg transition-all duration-300">
-              <div className="w-10 h-10 rounded-xl bg-dog/8 flex items-center justify-center mb-4 group-hover:bg-dog/15 transition-colors text-xl">
+              className="group rounded-2xl border border-border bg-white p-5 sm:p-6 text-left hover:border-dog/30 hover:shadow-lg transition-all duration-300">
+              <div className="w-10 h-10 rounded-xl bg-dog/8 flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-dog/15 transition-colors text-xl">
                 🔗
               </div>
               <h3 className="font-bold text-text mb-1">Paste a URL</h3>
@@ -47,8 +47,8 @@ export default function Home() {
             </Link>
 
             <Link href="/supplements"
-              className="group rounded-2xl border border-border bg-white p-6 text-left hover:border-dog/30 hover:shadow-lg transition-all duration-300">
-              <div className="w-10 h-10 rounded-xl bg-dog/8 flex items-center justify-center mb-4 group-hover:bg-dog/15 transition-colors text-xl">
+              className="group rounded-2xl border border-border bg-white p-5 sm:p-6 text-left hover:border-dog/30 hover:shadow-lg transition-all duration-300">
+              <div className="w-10 h-10 rounded-xl bg-dog/8 flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-dog/15 transition-colors text-xl">
                 🏆
               </div>
               <h3 className="font-bold text-text mb-1">Leaderboard</h3>
@@ -56,8 +56,8 @@ export default function Home() {
             </Link>
 
             <Link href="/recommend"
-              className="group rounded-2xl border border-border bg-white p-6 text-left hover:border-dog/30 hover:shadow-lg transition-all duration-300">
-              <div className="w-10 h-10 rounded-xl bg-dog/8 flex items-center justify-center mb-4 group-hover:bg-dog/15 transition-colors text-xl">
+              className="group rounded-2xl border border-border bg-white p-5 sm:p-6 text-left hover:border-dog/30 hover:shadow-lg transition-all duration-300">
+              <div className="w-10 h-10 rounded-xl bg-dog/8 flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-dog/15 transition-colors text-xl">
                 🐾
               </div>
               <h3 className="font-bold text-text mb-1">Find Your Match</h3>
@@ -65,7 +65,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <p className="text-xs text-text-dim max-w-lg mx-auto leading-relaxed">
+          <p className="text-xs text-text-dim max-w-lg mx-auto leading-relaxed px-4">
             Backed by Examine.com, NIH, and PubMed research. Reviewed by a board-certified physician.
           </p>
         </div>
@@ -73,14 +73,14 @@ export default function Home() {
 
       {/* How it works */}
       <section className="border-t border-border-light">
-        <div className="max-w-5xl mx-auto px-4 py-20">
+        <div className="max-w-5xl mx-auto px-4 py-12 sm:py-20">
           <h2 className="font-display text-3xl sm:text-4xl text-center mb-4 text-text">
             How SuppDog Works
           </h2>
-          <p className="text-text-muted text-center mb-16 max-w-md mx-auto">
+          <p className="text-text-muted text-center mb-10 sm:mb-16 max-w-md mx-auto">
             Like having a friend who actually reads the research.
           </p>
-          <div className="grid sm:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8">
             {[
               { icon: "🐾", title: "Sniff", desc: "Upload a label, paste a URL, or browse. SuppDog picks up the scent." },
               { icon: "🔬", title: "Dig", desc: "AI reads every ingredient, dose, and form — then checks it against clinical trials." },
@@ -88,9 +88,9 @@ export default function Home() {
               { icon: "📋", title: "Report", desc: "Get a full breakdown with grades, warnings, and plain-English explanations." },
             ].map((item) => (
               <div key={item.title} className="text-center">
-                <div className="text-4xl mb-3">{item.icon}</div>
-                <h3 className="font-bold text-text mb-2">{item.title}</h3>
-                <p className="text-sm text-text-muted">{item.desc}</p>
+                <div className="text-3xl sm:text-4xl mb-3">{item.icon}</div>
+                <h3 className="font-bold text-text mb-2 text-sm sm:text-base">{item.title}</h3>
+                <p className="text-xs sm:text-sm text-text-muted">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -99,14 +99,14 @@ export default function Home() {
 
       {/* What we check */}
       <section className="border-t border-border-light bg-white">
-        <div className="max-w-5xl mx-auto px-4 py-20">
+        <div className="max-w-5xl mx-auto px-4 py-12 sm:py-20">
           <h2 className="font-display text-3xl sm:text-4xl text-center mb-4 text-text">
             What SuppDog Checks
           </h2>
-          <p className="text-text-muted text-center mb-16 max-w-lg mx-auto">
+          <p className="text-text-muted text-center mb-10 sm:mb-16 max-w-lg mx-auto">
             Four categories. One score. Zero bias.
           </p>
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             {[
               { title: "Clinical Dosing", weight: "50%", color: "text-green-700", bg: "bg-green-50", border: "border-green-200", icon: "⚖️",
                 desc: "Is each ingredient at the dose proven to work in clinical trials? SuppDog compares every ingredient against peer-reviewed research. Below 25% = fairy dusted." },
@@ -117,12 +117,12 @@ export default function Home() {
               { title: "Formula Intelligence", weight: "10%", color: "text-purple-700", bg: "bg-purple-50", border: "border-purple-200", icon: "🧠",
                 desc: "Smart formulas pair ingredients that boost each other (D3+K2, curcumin+piperine). Kitchen-sink formulas with 30+ ingredients get called out." },
             ].map((cat) => (
-              <div key={cat.title} className={`rounded-2xl border ${cat.border} ${cat.bg} p-6`}>
+              <div key={cat.title} className={`rounded-2xl border ${cat.border} ${cat.bg} p-4 sm:p-6`}>
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className={`font-bold text-lg ${cat.color}`}>{cat.icon} {cat.title}</h3>
+                  <h3 className={`font-bold text-base sm:text-lg ${cat.color}`}>{cat.icon} {cat.title}</h3>
                   <span className="text-xs font-mono text-text-dim bg-white/60 px-2 py-1 rounded">{cat.weight}</span>
                 </div>
-                <p className="text-sm text-text-secondary leading-relaxed">{cat.desc}</p>
+                <p className="text-xs sm:text-sm text-text-secondary leading-relaxed">{cat.desc}</p>
               </div>
             ))}
           </div>
@@ -131,16 +131,16 @@ export default function Home() {
 
       {/* Chrome extension callout */}
       <section className="border-t border-border-light">
-        <div className="max-w-3xl mx-auto px-4 py-20 text-center">
-          <div className="text-5xl mb-6">🐶</div>
+        <div className="max-w-3xl mx-auto px-4 py-12 sm:py-20 text-center">
+          <div className="text-4xl sm:text-5xl mb-4 sm:mb-6">🐶</div>
           <h2 className="font-display text-3xl sm:text-4xl mb-4 text-text">
             Get the Chrome Extension
           </h2>
-          <p className="text-text-muted mb-8 max-w-lg mx-auto">
+          <p className="text-text-muted mb-6 sm:mb-8 max-w-lg mx-auto text-sm sm:text-base">
             SuppDog rides along while you shop. It automatically detects supplement
             pages and grades them on the spot — no copy-pasting needed.
           </p>
-          <div className="flex gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 sm:px-0">
             <Link href="/grade" className="bg-dog text-white font-bold px-8 py-3 rounded-full hover:bg-dog-bright transition-colors text-sm">
               Grade a Supplement
             </Link>

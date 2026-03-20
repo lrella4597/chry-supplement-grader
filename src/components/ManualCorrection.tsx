@@ -38,11 +38,11 @@ export function ManualCorrection({
   return (
     <div className="space-y-6 animate-fade-up">
       <div className="flex items-center justify-between">
-        <h2 className="font-display text-2xl text-text">Review Extracted Data</h2>
+        <h2 className="font-display text-xl sm:text-2xl text-text">Review Extracted Data</h2>
         <button onClick={onBack} className="text-sm text-text-muted hover:text-dog transition-colors">Back</button>
       </div>
 
-      <div className="rounded-xl border border-dog/20 bg-dog/5 p-4">
+      <div className="rounded-xl border border-dog/20 bg-dog/5 p-3 sm:p-4">
         <p className="text-sm text-text-secondary">
           Our AI parsed your supplement label. Review the data below and correct any errors before scoring.
         </p>
@@ -63,25 +63,53 @@ export function ManualCorrection({
         </div>
         <div className="space-y-2">
           {ingredients.map((ing, i) => (
-            <div key={i} className="flex gap-2 items-center border border-border rounded-xl bg-white p-3">
-              <input type="text" value={ing.name} onChange={(e) => updateIngredient(i, "name", e.target.value)}
-                className="flex-1 text-sm px-3 py-2 border border-border-light rounded-lg bg-cream-light text-text focus:outline-none focus:ring-1 focus:ring-dog/30" placeholder="Ingredient name"
-              />
-              <input type="number" value={ing.dose || ""} onChange={(e) => updateIngredient(i, "dose", parseFloat(e.target.value) || 0)}
-                className="w-24 text-sm px-3 py-2 border border-border-light rounded-lg bg-cream-light text-text focus:outline-none focus:ring-1 focus:ring-dog/30" placeholder="Dose"
-              />
-              <select value={ing.unit || "mg"} onChange={(e) => updateIngredient(i, "unit", e.target.value)}
-                className="text-sm px-3 py-2 border border-border-light rounded-lg bg-cream-light text-text focus:outline-none"
-              >
-                <option value="mg">mg</option>
-                <option value="mcg">mcg</option>
-                <option value="g">g</option>
-                <option value="IU">IU</option>
-              </select>
-              <input type="text" value={ing.form || ""} onChange={(e) => updateIngredient(i, "form", e.target.value || null)}
-                className="w-36 text-sm px-3 py-2 border border-border-light rounded-lg bg-cream-light text-text focus:outline-none focus:ring-1 focus:ring-dog/30" placeholder="Form (optional)"
-              />
-              <button onClick={() => removeIngredient(i)} className="text-red-400 hover:text-red-600 text-lg px-2 transition-colors">x</button>
+            <div key={i} className="border border-border rounded-xl bg-white p-3">
+              {/* Desktop: single row */}
+              <div className="hidden sm:flex gap-2 items-center">
+                <input type="text" value={ing.name} onChange={(e) => updateIngredient(i, "name", e.target.value)}
+                  className="flex-1 text-sm px-3 py-2 border border-border-light rounded-lg bg-cream-light text-text focus:outline-none focus:ring-1 focus:ring-dog/30" placeholder="Ingredient name"
+                />
+                <input type="number" value={ing.dose || ""} onChange={(e) => updateIngredient(i, "dose", parseFloat(e.target.value) || 0)}
+                  className="w-24 text-sm px-3 py-2 border border-border-light rounded-lg bg-cream-light text-text focus:outline-none focus:ring-1 focus:ring-dog/30" placeholder="Dose"
+                />
+                <select value={ing.unit || "mg"} onChange={(e) => updateIngredient(i, "unit", e.target.value)}
+                  className="text-sm px-3 py-2 border border-border-light rounded-lg bg-cream-light text-text focus:outline-none"
+                >
+                  <option value="mg">mg</option>
+                  <option value="mcg">mcg</option>
+                  <option value="g">g</option>
+                  <option value="IU">IU</option>
+                </select>
+                <input type="text" value={ing.form || ""} onChange={(e) => updateIngredient(i, "form", e.target.value || null)}
+                  className="w-36 text-sm px-3 py-2 border border-border-light rounded-lg bg-cream-light text-text focus:outline-none focus:ring-1 focus:ring-dog/30" placeholder="Form (optional)"
+                />
+                <button onClick={() => removeIngredient(i)} className="text-red-400 hover:text-red-600 text-lg px-2 transition-colors shrink-0">x</button>
+              </div>
+              {/* Mobile: stacked 2x2 grid */}
+              <div className="sm:hidden space-y-2">
+                <input type="text" value={ing.name} onChange={(e) => updateIngredient(i, "name", e.target.value)}
+                  className="w-full text-sm px-3 py-2 border border-border-light rounded-lg bg-cream-light text-text focus:outline-none focus:ring-1 focus:ring-dog/30" placeholder="Ingredient name"
+                />
+                <div className="grid grid-cols-3 gap-2">
+                  <input type="number" value={ing.dose || ""} onChange={(e) => updateIngredient(i, "dose", parseFloat(e.target.value) || 0)}
+                    className="col-span-1 text-sm px-3 py-2 border border-border-light rounded-lg bg-cream-light text-text focus:outline-none focus:ring-1 focus:ring-dog/30" placeholder="Dose"
+                  />
+                  <select value={ing.unit || "mg"} onChange={(e) => updateIngredient(i, "unit", e.target.value)}
+                    className="col-span-1 text-sm px-3 py-2 border border-border-light rounded-lg bg-cream-light text-text focus:outline-none"
+                  >
+                    <option value="mg">mg</option>
+                    <option value="mcg">mcg</option>
+                    <option value="g">g</option>
+                    <option value="IU">IU</option>
+                  </select>
+                  <button onClick={() => removeIngredient(i)} className="col-span-1 text-red-500 hover:text-red-600 text-sm font-medium border border-red-200 rounded-lg bg-red-50 transition-colors">
+                    Remove
+                  </button>
+                </div>
+                <input type="text" value={ing.form || ""} onChange={(e) => updateIngredient(i, "form", e.target.value || null)}
+                  className="w-full text-sm px-3 py-2 border border-border-light rounded-lg bg-cream-light text-text focus:outline-none focus:ring-1 focus:ring-dog/30" placeholder="Form (optional)"
+                />
+              </div>
             </div>
           ))}
         </div>

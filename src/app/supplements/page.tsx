@@ -45,7 +45,7 @@ export default function SupplementsPage() {
 
   if (selected) {
     return (
-      <div className="max-w-2xl mx-auto px-4 py-12 animate-fade-up">
+      <div className="max-w-2xl mx-auto px-4 py-8 sm:py-12 animate-fade-up">
         <button onClick={() => setSelected(null)} className="text-sm text-text-muted hover:text-dog mb-6 flex items-center gap-1 transition-colors">
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
@@ -58,12 +58,12 @@ export default function SupplementsPage() {
   }
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12">
-      <div className="text-center mb-10">
-        <h1 className="font-display text-4xl sm:text-5xl mb-3">
+    <div className="max-w-6xl mx-auto px-4 py-8 sm:py-12">
+      <div className="text-center mb-8 sm:mb-10">
+        <h1 className="font-display text-3xl sm:text-4xl md:text-5xl mb-3">
           <span className="text-text">Supplement </span><span className="text-dog">Leaderboard</span>
         </h1>
-        <p className="text-text-muted">See how the most popular supplements actually score against clinical research.</p>
+        <p className="text-text-muted text-sm sm:text-base">See how the most popular supplements actually score against clinical research.</p>
       </div>
 
       {/* Search & filters */}
@@ -84,11 +84,11 @@ export default function SupplementsPage() {
         </select>
       </div>
 
-      {/* Category tabs */}
-      <div className="flex gap-2 overflow-x-auto pb-3 mb-8">
+      {/* Category tabs - horizontal scroll with hidden scrollbar */}
+      <div className="flex gap-2 overflow-x-auto pb-3 mb-8 scrollbar-hide [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         {(Object.keys(CATEGORY_LABELS) as Category[]).map((cat) => (
           <button key={cat} onClick={() => setCategory(cat)}
-            className={`whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium transition-all ${
+            className={`whitespace-nowrap px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all shrink-0 ${
               category === cat ? "bg-dog text-white shadow-sm" : "bg-white border border-border text-text-muted hover:border-dog/30 hover:text-text"
             }`}
           >
@@ -99,56 +99,56 @@ export default function SupplementsPage() {
 
       {/* Hall of Fame / Needs Improvement */}
       {category === "all" && !search && (
-        <div className="grid sm:grid-cols-2 gap-4 mb-10">
-          <div className="rounded-2xl border border-green-200 bg-green-50 p-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+          <div className="rounded-2xl border border-green-200 bg-green-50 p-4 sm:p-5">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center">
                 <svg className="w-3.5 h-3.5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                 </svg>
               </div>
-              <h3 className="font-display text-lg text-green-800">Top Dogs 🏆</h3>
+              <h3 className="font-display text-base sm:text-lg text-green-800">Top Dogs 🏆</h3>
               <span className="text-[10px] text-green-600 uppercase tracking-wider ml-auto">A / A-</span>
             </div>
             {hallOfFame.length === 0 && <p className="text-sm text-text-dim">No supplements scored A or above.</p>}
             <div className="space-y-1">
               {hallOfFame.slice(0, 8).map((g) => (
                 <button key={g.profile.id} onClick={() => setSelected(g)}
-                  className="w-full flex items-center gap-3 py-2.5 px-3 rounded-xl hover:bg-green-100/50 transition-colors text-left"
+                  className="w-full flex items-center gap-2 sm:gap-3 py-2 sm:py-2.5 px-2 sm:px-3 rounded-xl hover:bg-green-100/50 transition-colors text-left"
                 >
                   <GradeBadge grade={g.result.grade} color={g.result.grade_color} size="sm" />
-                  <div className="min-w-0">
-                    <div className="text-sm font-semibold text-text truncate">{g.profile.product_name}</div>
-                    <div className="text-xs text-text-dim">{g.profile.brand}</div>
+                  <div className="min-w-0 flex-1">
+                    <div className="text-xs sm:text-sm font-semibold text-text truncate">{g.profile.product_name}</div>
+                    <div className="text-[10px] sm:text-xs text-text-dim">{g.profile.brand}</div>
                   </div>
-                  <span className="text-xs font-mono text-green-700 ml-auto">{g.result.total_score}</span>
+                  <span className="text-xs font-mono text-green-700 shrink-0">{g.result.total_score}</span>
                 </button>
               ))}
             </div>
           </div>
 
-          <div className="rounded-2xl border border-red-200 bg-red-50 p-5">
+          <div className="rounded-2xl border border-red-200 bg-red-50 p-4 sm:p-5">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-6 h-6 rounded-full bg-red-100 flex items-center justify-center">
                 <svg className="w-3.5 h-3.5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                 </svg>
               </div>
-              <h3 className="font-display text-lg text-red-800">In the Doghouse 💩</h3>
+              <h3 className="font-display text-base sm:text-lg text-red-800">In the Doghouse 💩</h3>
               <span className="text-[10px] text-red-600 uppercase tracking-wider ml-auto">D / F</span>
             </div>
             {needsImprovement.length === 0 && <p className="text-sm text-text-dim">No supplements scored D or below.</p>}
             <div className="space-y-1">
               {needsImprovement.slice(0, 8).map((g) => (
                 <button key={g.profile.id} onClick={() => setSelected(g)}
-                  className="w-full flex items-center gap-3 py-2.5 px-3 rounded-xl hover:bg-red-100/50 transition-colors text-left"
+                  className="w-full flex items-center gap-2 sm:gap-3 py-2 sm:py-2.5 px-2 sm:px-3 rounded-xl hover:bg-red-100/50 transition-colors text-left"
                 >
                   <GradeBadge grade={g.result.grade} color={g.result.grade_color} size="sm" />
-                  <div className="min-w-0">
-                    <div className="text-sm font-semibold text-text truncate">{g.profile.product_name}</div>
-                    <div className="text-xs text-text-dim">{g.profile.brand}</div>
+                  <div className="min-w-0 flex-1">
+                    <div className="text-xs sm:text-sm font-semibold text-text truncate">{g.profile.product_name}</div>
+                    <div className="text-[10px] sm:text-xs text-text-dim">{g.profile.brand}</div>
                   </div>
-                  <span className="text-xs font-mono text-red-700 ml-auto">{g.result.total_score}</span>
+                  <span className="text-xs font-mono text-red-700 shrink-0">{g.result.total_score}</span>
                 </button>
               ))}
             </div>
@@ -157,16 +157,16 @@ export default function SupplementsPage() {
       )}
 
       {/* Main grid */}
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
         {filtered.map((g) => (
           <button key={g.profile.id} onClick={() => setSelected(g)}
-            className="rounded-2xl border border-border bg-white p-5 text-left hover:border-dog/30 hover:shadow-md transition-all duration-300 group"
+            className="rounded-2xl border border-border bg-white p-4 sm:p-5 text-left hover:border-dog/30 hover:shadow-md transition-all duration-300 group"
           >
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-3 mb-3 sm:mb-4">
               <GradeBadge grade={g.result.grade} color={g.result.grade_color} size="md" />
               <div className="min-w-0">
-                <div className="font-bold text-text truncate group-hover:text-dog transition-colors">{g.profile.product_name}</div>
-                <div className="text-xs text-text-dim">{g.profile.brand}</div>
+                <div className="font-bold text-sm sm:text-base text-text truncate group-hover:text-dog transition-colors">{g.profile.product_name}</div>
+                <div className="text-[10px] sm:text-xs text-text-dim">{g.profile.brand}</div>
               </div>
             </div>
             <div className="flex items-center justify-between mb-3">
@@ -184,8 +184,8 @@ export default function SupplementsPage() {
 
       {filtered.length === 0 && <div className="text-center py-16 text-text-dim">No supplements found matching your search.</div>}
 
-      <div className="text-center mt-16 py-10 border-t border-border-light">
-        <p className="text-text-muted mb-4">Don&apos;t see your supplement? Grade it yourself.</p>
+      <div className="text-center mt-12 sm:mt-16 py-8 sm:py-10 border-t border-border-light">
+        <p className="text-text-muted mb-4 text-sm sm:text-base">Don&apos;t see your supplement? Grade it yourself.</p>
         <a href="/grade" className="inline-block bg-dog text-white font-bold px-8 py-3 rounded-full hover:bg-dog-bright transition-colors text-sm">
           Grade Your Supplement
         </a>

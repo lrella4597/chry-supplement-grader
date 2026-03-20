@@ -79,19 +79,19 @@ function CategoryBarItem({ label, score, max }: { label: string; score: number; 
       className="rounded-xl border border-border bg-white overflow-hidden transition-all duration-300 cursor-pointer hover:shadow-sm"
       onClick={() => setExpanded(!expanded)}
     >
-      <div className="p-4">
-        <div className="flex items-center justify-between mb-2">
-          <div className="flex items-center gap-3">
-            <span className="font-semibold text-sm text-text">{label}</span>
+      <div className="p-3 sm:p-4">
+        <div className="flex items-center justify-between mb-2 gap-2">
+          <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+            <span className="font-semibold text-xs sm:text-sm text-text truncate">{label}</span>
             <span
-              className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full"
+              className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider px-1.5 sm:px-2 py-0.5 rounded-full shrink-0"
               style={{ backgroundColor: style.bg, color: style.color }}
             >
               {ratingLabel}
             </span>
           </div>
-          <div className="flex items-center gap-3">
-            <span className="text-sm font-mono text-text-muted">
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+            <span className="text-xs sm:text-sm font-mono text-text-muted">
               {score.toFixed(1)}/{max}
             </span>
             <svg
@@ -111,13 +111,13 @@ function CategoryBarItem({ label, score, max }: { label: string; score: number; 
       </div>
 
       {expanded && info && (
-        <div className="px-4 pb-4 border-t border-border-light pt-3 space-y-3">
-          <p className="text-sm text-text-secondary leading-relaxed">{info.description}</p>
+        <div className="px-3 sm:px-4 pb-3 sm:pb-4 border-t border-border-light pt-3 space-y-3">
+          <p className="text-xs sm:text-sm text-text-secondary leading-relaxed">{info.description}</p>
           <div>
-            <p className="text-xs font-semibold text-text-dim uppercase tracking-wider mb-2">What we check:</p>
+            <p className="text-[10px] sm:text-xs font-semibold text-text-dim uppercase tracking-wider mb-2">What we check:</p>
             <ul className="space-y-1.5">
               {info.whatWeCheck.map((item, i) => (
-                <li key={i} className="text-xs text-text-secondary flex items-start gap-2">
+                <li key={i} className="text-[11px] sm:text-xs text-text-secondary flex items-start gap-2">
                   <span className="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0" style={{ backgroundColor: style.color }} />
                   {item}
                 </li>

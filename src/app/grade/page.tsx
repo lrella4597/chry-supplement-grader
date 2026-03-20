@@ -160,11 +160,11 @@ function GradePage() {
   }
 
   return (
-    <div className="max-w-2xl mx-auto px-4 py-12">
+    <div className="max-w-2xl mx-auto px-4 py-8 sm:py-12">
       {step === "input" && (
         <div className="space-y-6 animate-fade-up">
-          <div className="text-center mb-8">
-            <h1 className="font-display text-4xl sm:text-5xl mb-3">
+          <div className="text-center mb-6 sm:mb-8">
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl mb-3">
               <span className="text-text">Grade Your </span>
               <span className="text-dog">Supplement</span>
             </h1>

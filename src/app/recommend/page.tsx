@@ -68,14 +68,14 @@ export default function RecommendPage() {
   }
 
   return (
-    <div className="max-w-3xl mx-auto px-4 py-12">
+    <div className="max-w-3xl mx-auto px-4 py-8 sm:py-12">
       {/* Header */}
-      <div className="text-center mb-8">
-        <h1 className="font-display text-4xl sm:text-5xl mb-3">
+      <div className="text-center mb-6 sm:mb-8">
+        <h1 className="font-display text-3xl sm:text-4xl md:text-5xl mb-3">
           <span className="text-text">Find Your </span>
           <span className="text-dog">Match</span>
         </h1>
-        <p className="text-text-muted max-w-lg mx-auto">
+        <p className="text-text-muted max-w-lg mx-auto text-sm sm:text-base">
           Tell us your goals, preferences, and concerns. Our AI advisor will
           recommend the best supplements for you — backed by clinical research.
         </p>
@@ -83,23 +83,23 @@ export default function RecommendPage() {
 
       {/* Quick start goals */}
       {!started && (
-        <div className="mb-8 animate-fade-up">
+        <div className="mb-6 sm:mb-8 animate-fade-up">
           <p className="text-sm font-medium text-text-secondary text-center mb-4">
             What are you looking for?
           </p>
-          <div className="flex flex-wrap gap-2 justify-center">
+          <div className="flex flex-wrap gap-2 justify-center px-2">
             {QUICK_GOALS.map((goal) => (
               <button
                 key={goal}
                 onClick={() => handleQuickGoal(goal)}
-                className="px-4 py-2 rounded-full text-sm font-medium bg-white border border-border text-text-secondary hover:border-dog/30 hover:text-dog transition-all"
+                className="px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium bg-white border border-border text-text-secondary hover:border-dog/30 hover:text-dog transition-all"
               >
                 {goal}
               </button>
             ))}
           </div>
           <div className="text-center mt-6">
-            <p className="text-xs text-text-dim">
+            <p className="text-xs text-text-dim px-4">
               Or type anything below — your goals, allergies, what you&apos;re
               currently taking, what you want to avoid.
             </p>
@@ -108,14 +108,14 @@ export default function RecommendPage() {
       )}
 
       {/* Chat messages */}
-      <div className="space-y-4 mb-6 min-h-[200px]">
+      <div className="space-y-3 sm:space-y-4 mb-6 min-h-[200px]">
         {messages.map((msg, i) => (
           <div
             key={i}
             className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"} animate-fade-up`}
           >
             <div
-              className={`max-w-[85%] rounded-2xl px-5 py-3.5 ${
+              className={`max-w-[90%] sm:max-w-[85%] rounded-2xl px-3.5 sm:px-5 py-2.5 sm:py-3.5 ${
                 msg.role === "user"
                   ? "bg-dog text-white rounded-br-md"
                   : "bg-white border border-border text-text rounded-bl-md"
@@ -123,13 +123,13 @@ export default function RecommendPage() {
             >
               {msg.role === "assistant" ? (
                 <div
-                  className="text-sm leading-relaxed prose prose-sm max-w-none [&_p]:mb-2 [&_ul]:mb-2 [&_li]:mb-1 [&_strong]:text-text [&_h3]:font-display [&_h3]:text-lg [&_h3]:mt-3 [&_h3]:mb-1"
+                  className="text-xs sm:text-sm leading-relaxed prose prose-sm max-w-none [&_p]:mb-2 [&_ul]:mb-2 [&_li]:mb-1 [&_strong]:text-text [&_h3]:font-display [&_h3]:text-base sm:[&_h3]:text-lg [&_h3]:mt-3 [&_h3]:mb-1"
                   dangerouslySetInnerHTML={{
                     __html: formatMarkdown(msg.content),
                   }}
                 />
               ) : (
-                <p className="text-sm">{msg.content}</p>
+                <p className="text-xs sm:text-sm">{msg.content}</p>
               )}
             </div>
           </div>
@@ -137,7 +137,7 @@ export default function RecommendPage() {
 
         {loading && (
           <div className="flex justify-start animate-fade-up">
-            <div className="bg-white border border-border rounded-2xl rounded-bl-md px-5 py-4">
+            <div className="bg-white border border-border rounded-2xl rounded-bl-md px-4 sm:px-5 py-3 sm:py-4">
               <div className="flex gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-text-dim animate-bounce" style={{ animationDelay: "0ms" }} />
                 <span className="w-2 h-2 rounded-full bg-text-dim animate-bounce" style={{ animationDelay: "150ms" }} />
@@ -152,7 +152,7 @@ export default function RecommendPage() {
 
       {/* Input */}
       <form onSubmit={handleSubmit} className="sticky bottom-4">
-        <div className="flex gap-2 bg-white border border-border rounded-2xl p-2 shadow-lg">
+        <div className="flex gap-2 bg-white border border-border rounded-2xl p-1.5 sm:p-2 shadow-lg">
           <input
             type="text"
             value={input}
@@ -162,18 +162,18 @@ export default function RecommendPage() {
                 ? "Tell me more about what you need..."
                 : "Describe your goals, concerns, allergies..."
             }
-            className="flex-1 px-4 py-3 text-sm text-text bg-transparent focus:outline-none placeholder:text-text-dim"
+            className="flex-1 min-w-0 px-3 sm:px-4 py-2.5 sm:py-3 text-sm text-text bg-transparent focus:outline-none placeholder:text-text-dim"
             disabled={loading}
           />
           <button
             type="submit"
             disabled={loading || !input.trim()}
-            className="bg-dog text-white font-semibold px-6 py-3 rounded-xl hover:bg-dog-bright transition-colors text-sm disabled:opacity-50 disabled:cursor-not-allowed"
+            className="bg-dog text-white font-semibold px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl hover:bg-dog-bright transition-colors text-sm disabled:opacity-50 disabled:cursor-not-allowed shrink-0"
           >
             Send
           </button>
         </div>
-        <p className="text-[10px] text-text-dim text-center mt-2">
+        <p className="text-[10px] text-text-dim text-center mt-2 px-4">
           Not medical advice. Always consult your healthcare provider before
           starting supplements.
         </p>

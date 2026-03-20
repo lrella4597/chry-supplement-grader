@@ -38,20 +38,20 @@ export function ShareCard({ result }: { result: GradeResult }) {
 
   return (
     <div className="space-y-4">
-      <div ref={cardRef} className="rounded-2xl border border-border bg-white p-8 text-center max-w-sm mx-auto">
-        <div className="text-[10px] text-text-dim mb-6 uppercase tracking-[0.2em] font-medium">Supplement Grade</div>
+      <div ref={cardRef} className="rounded-2xl border border-border bg-white p-6 sm:p-8 text-center max-w-[320px] sm:max-w-sm mx-auto">
+        <div className="text-[10px] text-text-dim mb-4 sm:mb-6 uppercase tracking-[0.2em] font-medium">Supplement Grade</div>
         <div className="relative inline-flex mb-4">
           <div className="absolute inset-0 rounded-full blur-lg opacity-20" style={{ backgroundColor: result.grade_color }} />
           <div
-            className="w-20 h-20 rounded-full flex items-center justify-center font-display text-3xl text-white relative z-10 shadow-lg"
+            className="w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center font-display text-2xl sm:text-3xl text-white relative z-10 shadow-lg"
             style={{ backgroundColor: result.grade_color }}
           >
             {result.grade}
           </div>
         </div>
-        <div className="font-display text-3xl text-text mb-1">{result.total_score}/100</div>
-        <div className="font-semibold text-sm text-text-secondary mb-6">{result.product_name || "Your Supplement"}</div>
-        <div className="flex items-center justify-center gap-2 text-[10px] text-text-dim">
+        <div className="font-display text-2xl sm:text-3xl text-text mb-1">{result.total_score}/100</div>
+        <div className="font-semibold text-xs sm:text-sm text-text-secondary mb-4 sm:mb-6">{result.product_name || "Your Supplement"}</div>
+        <div className="flex items-center justify-center gap-2 text-[9px] sm:text-[10px] text-text-dim">
           <span>Graded by</span>
           <span className="text-dog font-bold">SuppDog</span>
           <span>drinkchry.com/grade</span>
@@ -59,8 +59,8 @@ export function ShareCard({ result }: { result: GradeResult }) {
       </div>
 
       {showEmailGate && (
-        <form onSubmit={handleEmailSubmit} className="max-w-sm mx-auto rounded-2xl border border-border bg-white p-6 space-y-3 text-center">
-          <p className="text-sm font-medium text-text">Enter your email to download your results card</p>
+        <form onSubmit={handleEmailSubmit} className="max-w-[320px] sm:max-w-sm mx-auto rounded-2xl border border-border bg-white p-4 sm:p-6 space-y-3 text-center">
+          <p className="text-xs sm:text-sm font-medium text-text">Enter your email to download your results card</p>
           <input
             type="email" value={email} onChange={(e) => setEmail(e.target.value)}
             placeholder="you@email.com"
@@ -76,7 +76,7 @@ export function ShareCard({ result }: { result: GradeResult }) {
 
       {!showEmailGate && (
         <div className="text-center">
-          <button onClick={handleDownload} className="border border-border text-text-secondary font-semibold px-8 py-3 rounded-full hover:border-dog/30 hover:text-dog transition-all text-sm">
+          <button onClick={handleDownload} className="border border-border text-text-secondary font-semibold px-6 sm:px-8 py-3 rounded-full hover:border-dog/30 hover:text-dog transition-all text-sm">
             Share Your Results
           </button>
         </div>

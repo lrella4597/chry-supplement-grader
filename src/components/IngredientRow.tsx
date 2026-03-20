@@ -51,21 +51,21 @@ export function IngredientRow({ item }: { item: IngredientScore }) {
       className="rounded-xl border border-border bg-white overflow-hidden transition-all duration-200 cursor-pointer hover:shadow-sm"
       onClick={() => setExpanded(!expanded)}
     >
-      <div className="p-4">
-        <div className="flex items-center justify-between mb-2">
-          <div className="flex items-center gap-2 flex-wrap">
-            <span className="font-semibold text-sm text-text">{item.ingredient_name}</span>
+      <div className="p-3 sm:p-4">
+        <div className="flex items-center justify-between mb-2 gap-2">
+          <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap min-w-0">
+            <span className="font-semibold text-xs sm:text-sm text-text">{item.ingredient_name}</span>
             {isFairyDusted && (
-              <span className="text-[10px] font-bold uppercase tracking-wider bg-red-100 text-red-700 px-2 py-0.5 rounded-full">Fairy Dusted</span>
+              <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider bg-red-100 text-red-700 px-1.5 sm:px-2 py-0.5 rounded-full">Fairy Dusted</span>
             )}
             {isUnderdosed && !isFairyDusted && (
-              <span className="text-[10px] font-bold uppercase tracking-wider bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">Underdosed</span>
+              <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider bg-amber-100 text-amber-700 px-1.5 sm:px-2 py-0.5 rounded-full">Underdosed</span>
             )}
             {!isFairyDusted && !isUnderdosed && pct >= 100 && (
-              <span className="text-[10px] font-bold uppercase tracking-wider bg-green-100 text-green-700 px-2 py-0.5 rounded-full">Clinical Dose</span>
+              <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider bg-green-100 text-green-700 px-1.5 sm:px-2 py-0.5 rounded-full">Clinical Dose</span>
             )}
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 shrink-0">
             {formIcon && (
               <div
                 className="w-5 h-5 rounded-full flex items-center justify-center"
@@ -98,37 +98,37 @@ export function IngredientRow({ item }: { item: IngredientScore }) {
           </div>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           <div className="flex-1 h-2.5 rounded-full bg-cream overflow-hidden">
             <div className="h-full rounded-full animate-fill" style={{ width: `${pct}%`, backgroundColor: barColor }} />
           </div>
-          <div className="text-xs text-text-muted whitespace-nowrap font-mono">
+          <div className="text-[10px] sm:text-xs text-text-muted whitespace-nowrap font-mono">
             {item.dose_mg > 0 ? formatDose(item.dose_mg) : "?"} / {formatDose(item.clinical_optimal_mg)}
           </div>
         </div>
       </div>
 
       {expanded && (
-        <div className="px-4 pb-4 border-t border-border-light pt-3 space-y-3 bg-cream-light">
+        <div className="px-3 sm:px-4 pb-3 sm:pb-4 border-t border-border-light pt-3 space-y-3 bg-cream-light">
           {benefits && (
-            <div className="flex items-start gap-2">
-              <span className="text-xs font-semibold text-text-dim uppercase tracking-wider shrink-0 w-20">Benefits:</span>
-              <p className="text-xs text-text-secondary">{benefits}</p>
+            <div className="flex flex-col sm:flex-row items-start gap-1 sm:gap-2">
+              <span className="text-[10px] sm:text-xs font-semibold text-text-dim uppercase tracking-wider shrink-0 sm:w-20">Benefits:</span>
+              <p className="text-[11px] sm:text-xs text-text-secondary">{benefits}</p>
             </div>
           )}
-          <div className="flex items-start gap-2">
-            <span className="text-xs font-semibold text-text-dim uppercase tracking-wider shrink-0 w-20">Dose:</span>
-            <p className="text-xs text-text-secondary">{getDoseExplanation(item)}</p>
+          <div className="flex flex-col sm:flex-row items-start gap-1 sm:gap-2">
+            <span className="text-[10px] sm:text-xs font-semibold text-text-dim uppercase tracking-wider shrink-0 sm:w-20">Dose:</span>
+            <p className="text-[11px] sm:text-xs text-text-secondary">{getDoseExplanation(item)}</p>
           </div>
           {getFormExplanation(item) && (
-            <div className="flex items-start gap-2">
-              <span className="text-xs font-semibold text-text-dim uppercase tracking-wider shrink-0 w-20">Form:</span>
-              <p className="text-xs text-text-secondary">{getFormExplanation(item)}</p>
+            <div className="flex flex-col sm:flex-row items-start gap-1 sm:gap-2">
+              <span className="text-[10px] sm:text-xs font-semibold text-text-dim uppercase tracking-wider shrink-0 sm:w-20">Form:</span>
+              <p className="text-[11px] sm:text-xs text-text-secondary">{getFormExplanation(item)}</p>
             </div>
           )}
           {item.database_match && (
-            <div className="flex items-start gap-2">
-              <span className="text-xs font-semibold text-text-dim uppercase tracking-wider shrink-0 w-20">Evidence:</span>
+            <div className="flex flex-col sm:flex-row items-start gap-1 sm:gap-2">
+              <span className="text-[10px] sm:text-xs font-semibold text-text-dim uppercase tracking-wider shrink-0 sm:w-20">Evidence:</span>
               <div className="flex items-center gap-2">
                 <div className="flex gap-0.5">
                   {[1, 2, 3, 4].map((dot) => (
@@ -141,16 +141,16 @@ export function IngredientRow({ item }: { item: IngredientScore }) {
                     />
                   ))}
                 </div>
-                <span className="text-xs text-text-dim capitalize">{item.database_match.evidence_strength?.replace("_", " ")}</span>
+                <span className="text-[10px] sm:text-xs text-text-dim capitalize">{item.database_match.evidence_strength?.replace("_", " ")}</span>
               </div>
             </div>
           )}
           {item.notes.length > 0 && (
-            <div className="flex items-start gap-2">
-              <span className="text-xs font-semibold text-text-dim uppercase tracking-wider shrink-0 w-20">Notes:</span>
+            <div className="flex flex-col sm:flex-row items-start gap-1 sm:gap-2">
+              <span className="text-[10px] sm:text-xs font-semibold text-text-dim uppercase tracking-wider shrink-0 sm:w-20">Notes:</span>
               <div className="space-y-1">
                 {item.notes.map((note, i) => (
-                  <p key={i} className="text-xs text-text-secondary italic">{note}</p>
+                  <p key={i} className="text-[11px] sm:text-xs text-text-secondary italic">{note}</p>
                 ))}
               </div>
             </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { MobileHeader } from "@/components/MobileHeader";
 
 export const metadata: Metadata = {
   title: "SuppDog | Your Supplement Watchdog",
@@ -23,36 +24,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen antialiased">
-        <header className="border-b border-border bg-white/80 backdrop-blur-xl sticky top-0 z-50">
-          <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-            <a href="/" className="flex items-center gap-3">
-              <span className="text-2xl">🐶</span>
-              <div className="flex items-baseline gap-2">
-                <span className="font-display text-2xl tracking-wide text-dog">
-                  SuppDog
-                </span>
-                <span className="text-xs font-medium text-text-dim tracking-widest uppercase">
-                  by CHRY
-                </span>
-              </div>
-            </a>
-            <nav className="flex gap-1">
-              <a href="/grade" className="px-4 py-2 rounded-lg text-sm font-medium text-text-muted hover:text-text hover:bg-cream transition-all">
-                Grade
-              </a>
-              <a href="/recommend" className="px-4 py-2 rounded-lg text-sm font-medium text-text-muted hover:text-text hover:bg-cream transition-all">
-                Find Your Match
-              </a>
-              <a href="/supplements" className="px-4 py-2 rounded-lg text-sm font-medium text-text-muted hover:text-text hover:bg-cream transition-all">
-                Leaderboard
-              </a>
-              <a href="https://drinkchry.com" target="_blank" rel="noopener noreferrer"
-                className="ml-2 px-4 py-2 rounded-lg text-sm font-semibold bg-dog text-white hover:bg-dog-bright transition-all">
-                Shop CHRY
-              </a>
-            </nav>
-          </div>
-        </header>
+        <MobileHeader />
         <main>{children}</main>
         <footer className="border-t border-border mt-20 bg-white">
           <div className="max-w-6xl mx-auto px-4 py-10 space-y-4">
@@ -73,7 +45,7 @@ export default function RootLayout({
               Office of Dietary Supplements, PubMed clinical trials, and
               reviewed by a board-certified physician.
             </p>
-            <div className="pt-4 border-t border-border-light flex items-center justify-between">
+            <div className="pt-4 border-t border-border-light flex flex-col sm:flex-row items-center justify-between gap-2">
               <p className="text-[11px] text-text-dim">
                 &copy; {new Date().getFullYear()} SuppDog by CHRY Wellness
               </p>
