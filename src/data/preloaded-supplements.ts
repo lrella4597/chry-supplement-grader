@@ -134,6 +134,27 @@ export const preloadedSupplements: SupplementProfile[] = [
   // SLEEP / RECOVERY
   // ============================================================
   {
+    id: "chry-nightly-recovery",
+    product_name: "CHRY Nightly Recovery",
+    brand: "CHRY Wellness",
+    category: "sleep",
+    data: {
+      product_name: "CHRY Nightly Recovery",
+      serving_size: "1 scoop (8g)",
+      servings_per_container: 30,
+      ingredients: [
+        { name: "Magnesium", dose: 400, unit: "mg", form: "magnesium bisglycinate", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "L-Theanine", dose: 200, unit: "mg", form: "Suntheanine", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Apigenin", dose: 50, unit: "mg", form: "standardized chamomile extract", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Tart Cherry", dose: 500, unit: "mg", form: "montmorency tart cherry extract", is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Glycine", dose: 3000, unit: "mg", form: null, is_proprietary_blend: false, proprietary_blend_name: null },
+        { name: "Melatonin", dose: 1, unit: "mg", form: null, is_proprietary_blend: false, proprietary_blend_name: null },
+      ],
+      other_ingredients: ["monk fruit extract", "natural tart cherry flavor"],
+      contains_proprietary_blend: false,
+    },
+  },
+  {
     id: "beam-dream-powder",
     product_name: "Beam Dream Powder",
     brand: "Beam",
