@@ -442,7 +442,7 @@ export const ingredients: Ingredient[] = [
     category: "Adaptogens & Stress",
     clinical_dose_min_mg: 225,
     clinical_dose_optimal_mg: 600,
-    clinical_dose_max_mg: 600,
+    clinical_dose_max_mg: 1200,
     form_matters: true,
     preferred_forms: ["KSM-66", "Sensoril", "Shoden"],
     inferior_forms: ["unstandardized root powder"],
@@ -745,7 +745,7 @@ export const ingredients: Ingredient[] = [
   {
     id: "zinc",
     name: "Zinc",
-    aliases: ["zinc picolinate", "zinc citrate", "zinc gluconate"],
+    aliases: ["zinc picolinate", "zinc citrate", "zinc gluconate", "zinc oxide", "zinc bisglycinate", "zinc acetate", "zinc sulfate"],
     category: "Minerals",
     clinical_dose_min_mg: 15,
     clinical_dose_optimal_mg: 25,
@@ -761,7 +761,7 @@ export const ingredients: Ingredient[] = [
   {
     id: "iron",
     name: "Iron",
-    aliases: ["ferrous sulfate", "ferrous bisglycinate"],
+    aliases: ["ferrous sulfate", "ferrous bisglycinate", "ferrous fumarate", "iron bisglycinate", "ferrous gluconate", "carbonyl iron"],
     category: "Minerals",
     clinical_dose_min_mg: 18,
     clinical_dose_optimal_mg: 27,
@@ -2389,8 +2389,8 @@ export const ingredients: Ingredient[] = [
     form_matters: false,
     sources: ["Examine.com", "PubMed"],
     is_red_flag: true,
-    penalty_type: "major",
-    reason: "Filler/bulking agent, high glycemic index",
+    penalty_type: "minor",
+    reason: "Filler/bulking agent, high glycemic index — minor concern when used as excipient, major concern when listed as a primary ingredient",
   },
   {
     id: "silicon_dioxide",
