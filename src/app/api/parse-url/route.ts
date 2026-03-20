@@ -101,12 +101,28 @@ export async function POST(request: NextRequest) {
     }
 
     let jsonStr = textBlock.text.trim();
-    const jsonMatch = jsonStr.match(/```(?:json)?\s*([\s\S]*?)```/);
-    if (jsonMatch) {
-      jsonStr = jsonMatch[1].trim();
+
+    // Try extracting JSON from markdown code blocks
+    const codeBlockMatch = jsonStr.match(/```(?:json)?\s*([\s\S]*?)```/);
+    if (codeBlockMatch) {
+      jsonStr = codeBlockMatch[1].trim();
+    } else {
+      // Try finding the first { ... } block in the response
+      const braceMatch = jsonStr.match(/\{[\s\S]*\}/);
+      if (braceMatch) {
+        jsonStr = braceMatch[0];
+      }
     }
 
-    const parsed = JSON.parse(jsonStr);
+    let parsed;
+    try {
+      parsed = JSON.parse(jsonStr);
+    } catch {
+      return NextResponse.json(
+        { error: "Could not extract supplement facts from this page. Try uploading a photo of the label instead." },
+        { status: 400 }
+      );
+    }
 
     if (parsed.error) {
       return NextResponse.json({ error: parsed.error }, { status: 400 });

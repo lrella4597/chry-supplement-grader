@@ -83,14 +83,28 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Extract JSON from the response (handle markdown code blocks)
+    // Extract JSON from the response (handle markdown code blocks or mixed text)
     let jsonStr = textBlock.text.trim();
-    const jsonMatch = jsonStr.match(/```(?:json)?\s*([\s\S]*?)```/);
-    if (jsonMatch) {
-      jsonStr = jsonMatch[1].trim();
+    const codeBlockMatch = jsonStr.match(/```(?:json)?\s*([\s\S]*?)```/);
+    if (codeBlockMatch) {
+      jsonStr = codeBlockMatch[1].trim();
+    } else {
+      const braceMatch = jsonStr.match(/\{[\s\S]*\}/);
+      if (braceMatch) {
+        jsonStr = braceMatch[0];
+      }
     }
 
-    const parsed = JSON.parse(jsonStr);
+    let parsed;
+    try {
+      parsed = JSON.parse(jsonStr);
+    } catch {
+      return NextResponse.json(
+        { error: "Could not read the supplement label. Try a clearer photo with the full Supplement Facts panel visible." },
+        { status: 400 }
+      );
+    }
+
     return NextResponse.json(parsed);
   } catch (error: unknown) {
     console.error("Parse image error:", error);

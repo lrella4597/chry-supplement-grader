@@ -503,14 +503,16 @@ export function scoreCleanLabel(
 
       if (isMatch) {
         const key = `db:${ing.name}`;
-        if (!matched.has(key)) {
-          const penalty = redFlagPenalty ?? 10;
-          pct -= penalty;
+        // Skip if already matched by regex rules or a previous DB match
+        const alreadyCovered = matched.has(key) ||
+          penalties.some((p) => p.ingredient.toLowerCase() === text.toLowerCase());
+        if (!alreadyCovered) {
+          pct -= redFlagPenalty;
           matched.add(key);
           penalties.push({
             ingredient: text,
-            penalty,
-            reason: redFlagReason ?? `Red flag ingredient: ${ing.name}`,
+            penalty: redFlagPenalty,
+            reason: redFlagReason,
           });
         }
       }
